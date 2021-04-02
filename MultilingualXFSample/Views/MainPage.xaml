@@ -8,6 +8,7 @@
              x:Class="MultilingualXFSample.MainPage">
     <StackLayout HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand">
+        <Label x:Name="LocalizedDateTime" FontSize="Title" />
         <Label Text="{x:Static resource:AppResources.WelcomeText}"
                FontSize="Large"/>
          <Button Clicked="Handle_Clicked"
