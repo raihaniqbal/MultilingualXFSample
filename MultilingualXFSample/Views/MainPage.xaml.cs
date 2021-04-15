@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Threading;
 using MultilingualXFSample.Resources;
 using MultilingualXFSample.Views;
 using Xamarin.Forms;
@@ -14,7 +15,7 @@ namespace MultilingualXFSample
         public MainPage()
         {
             InitializeComponent();
-            LocalizedDateTime.Text = $"Current Time: {DateTime.Now.ToShortTimeString()}";
+            LocalizedDateTime.Text = $"Today is: {DateTime.Now.ToString("D", Thread.CurrentThread.CurrentUICulture)}";
         }
         async void Handle_Clicked(object sender, System.EventArgs e)
         {
