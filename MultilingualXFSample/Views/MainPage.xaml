@@ -6,12 +6,16 @@
              xmlns:resource="clr-namespace:MultilingualXFSample.Resources"
              mc:Ignorable="d"
              x:Class="MultilingualXFSample.MainPage">
-    <StackLayout HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand">
-        <Label x:Name="LocalizedDateTime" FontSize="Title" />
+    <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Spacing="20">
+        
         <Label Text="{x:Static resource:AppResources.WelcomeText}"
                FontSize="Large"/>
-         <Button Clicked="Handle_Clicked"
+
+        <Label x:Name="LocalizedDate" FontSize="Title" />
+
+        <Label x:Name="LocalizedTime" FontSize="Title" />
+
+        <Button Clicked="Handle_Clicked"
                  Margin="5"
                  FontSize="19"
                  BorderColor="Black"

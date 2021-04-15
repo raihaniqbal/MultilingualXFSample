@@ -19,7 +19,7 @@ namespace MultilingualXFSample.Views
         {
             if (picker.SelectedItem != null)
             {
-                var language= CultureInfo.GetCultures(CultureTypes.NeutralCultures).ToList().First(element => element.EnglishName.Contains(picker.SelectedItem.ToString()));
+                var language = new CultureInfo(picker.SelectedItem.ToString());
                 Thread.CurrentThread.CurrentUICulture = language;
                 AppResources.Culture = language;
                 App.Current.MainPage = new NavigationPage(new MainPage());

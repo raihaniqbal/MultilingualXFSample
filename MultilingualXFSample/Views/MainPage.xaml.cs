@@ -15,7 +15,8 @@ namespace MultilingualXFSample
         public MainPage()
         {
             InitializeComponent();
-            LocalizedDateTime.Text = $"Today is: {DateTime.Now.ToString("D", Thread.CurrentThread.CurrentUICulture)}";
+            LocalizedDate.Text = $"{DateTime.Now.ToString("dddd٫ d MMM٫ yyyy", Thread.CurrentThread.CurrentUICulture)}";
+            LocalizedTime.Text = $"{DateTime.Now.ToString("hh:mm tt", Thread.CurrentThread.CurrentUICulture)}";
         }
         async void Handle_Clicked(object sender, System.EventArgs e)
         {
